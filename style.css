@@ -58,12 +58,53 @@ form div {
     width:100%;
 }
 
-form label {
-    width: 25%
-}
 
-form input {
+form .CustomerInfo input {
     float:right;
     margin-left: 1rem;
     width: 75%;
+}
+
+form .CustomerInfo .checkbox input {
+    float: none;
+    width: auto;
+    margin-left: 25%;
+}
+
+form .CustomerInfo .checkbox {
+    margin: none;
+    float: none
+}
+
+form .credit-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form .credit-card .ChooseCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+form .credit-card div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+}
+
+form .credit-card .CCImage {
+
+    width: 3rem;
+    height: auto;
+    padding: 0 0.5rem 0 0.5rem;
 }

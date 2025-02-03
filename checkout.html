@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Center Customer Info Below</h1>
+    <h1>Enter Customer Info Below</h1>
     <form action="submit">
+       <div class="CustomerInfo">
         <div>
             <label for="FirstName">First Name</label>
             <input type="input">
@@ -23,6 +24,70 @@
             <label for="LastName">Email</label>
             <input type="email">
         </div>
+        <div>
+            <label for="Address1">Address 1</label>
+            <input type="input">
+        </div>
+        <div>
+            <label for="Address2">Address 2</label>
+            <input type="input">
+        </div>
+        <div>
+            <label for="City">City</label>
+            <input type="input">
+        </div>
+        <div>
+            <label for="State">State</label>
+            <input type="input">
+        </div>
+        <div>
+            <label for="ZIP">ZIP</label>
+            <input type="input">
+        </div>
+        <div>
+            <label for="Counter">Counter</label>
+            <input type="input">
+        </div>
+        <div>
+            <label for="Phone">Phone</label>
+            <input type="input">
+        </div>
+        <div>
+            <label for="Fax">Fax</label>
+            <input type="input">
+        </div>
+        <div class="checkbox">
+            <input type="checkbox">
+            <span>Check here to be added to the mailing list</span>
+        </div>
+       </div>
+
+        <div class="credit-card">
+            <h2>Enter Credit Card Information Below</h3>
+                <div class="ChooseCard">
+                    <div>
+                        <input type="radio">
+                        <img class="CCImage" src="./images/checkout/mc.jpg" alt="">
+                        <label for="MasterCard">Master Card</label>
+                    </div>
+                    <div>
+                        <input type="radio">
+                        <img class="CCImage" src="./images/checkout/visa.jpg" alt="">
+                        <label for="Visa">Visa</label>
+                    </div>
+                    <div>
+                        <input type="radio">
+                        <img class="CCImage" src="./images/checkout/amex.jpg" alt="">
+                        <label for="AmericanExpress">American Express</label>
+                    </div>
+                    <div>
+                        <input type="radio">
+                        <img class="CCImage" src="./images/checkout/discover.jpg" alt="">
+                        <label for="Discover">Discover</label>
+                    </div>
+                </div>
+        </div>
+        
     </form>
     
 </body>
