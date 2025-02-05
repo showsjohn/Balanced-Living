@@ -8,87 +8,132 @@
 </head>
 <body>
     <h1>Enter Customer Info Below</h1>
-    <form action="submit">
+    <form action="http://localhost:8090/" method="POST">
+        <!--CUSTOMER INFORMATION SECTION OF FORM-->
        <div class="CustomerInfo">
         <div>
             <label for="FirstName">First Name</label>
-            <input type="input">
+            <input name="FirstName" type="input" required pattern="^[A-Za-z]+( [A-Za-z]+)?$">
         </div>
 
         <div>
             <label for="LastName">Last Name</label>
-            <input type="input">
+            <input name="LastName" type="input" pattern="^[A-Za-z]+( [A-Za-z]+)?$">
         </div>
 
         <div>
-            <label for="LastName">Email</label>
-            <input type="email">
+            <label for="Email" required>Email</label>
+            <input name="email" type="email" pattern=".{0,}@.{0,}">
         </div>
         <div>
             <label for="Address1">Address 1</label>
-            <input type="input">
+            <input name="address1" type="input" required>
         </div>
         <div>
             <label for="Address2">Address 2</label>
-            <input type="input">
+            <input name ="address2" type="input">
         </div>
         <div>
             <label for="City">City</label>
-            <input type="input">
+            <input name="city" type="input" required pattern="^[A-Za-z]+( [A-Za-z]+)?$">
         </div>
         <div>
             <label for="State">State</label>
-            <input type="input">
+            <input name="state" type="input" required pattern="[A-Z]{2}">
         </div>
         <div>
             <label for="ZIP">ZIP</label>
-            <input type="input">
+            <input name="ZIP" type="input" required pattern="[0-9]{5}">
         </div>
         <div>
-            <label for="Counter">Counter</label>
-            <input type="input">
+            <label for="Country">Country</label>
+            <input name="country" type="input" pattern="^[A-Za-z]+( [A-Za-z]+)?$">
         </div>
         <div>
             <label for="Phone">Phone</label>
-            <input type="input">
+            <input name="phone"type="input" required pattern="^[(]?[0-9]{3}[)]?[-]?[0-9]{3}[-]?[0-9]{4}">
         </div>
         <div>
             <label for="Fax">Fax</label>
-            <input type="input">
+            <input name="fax"type="input" pattern="^[(]?[0-9]{3}[)]?[-]?[0-9]{3}[-]?[0-9]{4}">
         </div>
         <div class="checkbox">
             <input type="checkbox">
             <span>Check here to be added to the mailing list</span>
         </div>
        </div>
+               <!--CREDIT CARD SECTION OF FORM-->
+               <!--ALL OF THIS INFORMATION RELATES TO THE CREDIT CARD-->
 
         <div class="credit-card">
-            <h2>Enter Credit Card Information Below</h3>
+            <h2>Enter Credit Card Information Below</h2>
+            <!--CREDIT CARD ISSUER-->
                 <div class="ChooseCard">
                     <div>
-                        <input type="radio">
+                        <input type="radio" name="CreditCard" value="MasterCard">
                         <img class="CCImage" src="./images/checkout/mc.jpg" alt="">
                         <label for="MasterCard">Master Card</label>
                     </div>
                     <div>
-                        <input type="radio">
+                        <input type="radio" name="CreditCard" value="Visa">
                         <img class="CCImage" src="./images/checkout/visa.jpg" alt="">
                         <label for="Visa">Visa</label>
                     </div>
                     <div>
-                        <input type="radio">
+                        <input type="radio" name="CreditCard" value="AMEX">
                         <img class="CCImage" src="./images/checkout/amex.jpg" alt="">
                         <label for="AmericanExpress">American Express</label>
                     </div>
                     <div>
-                        <input type="radio">
+                        <input type="radio" name="CreditCard" value="Discover">
                         <img class="CCImage" src="./images/checkout/discover.jpg" alt="">
                         <label for="Discover">Discover</label>
                     </div>
                 </div>
+                <h3>Enter Card Number and Expiration</h3>
+                <div>
+                    <label for="CCNumber">Credit Card Number</label>
+                    <input type="text" required pattern="^([0-9]{4}-?){4}$">
+                </div>
+                <div>
+                            <!--EXPIRATION MONTH DROP DOWN BOX-->
+                    <label for="ExpMonth">Expiration Month</label>
+                    <select name="ExpMonth" id="ExpMonth">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div>
+                            <!--EXPIRATION YEAR DROP DOWN BOX-->
+                    <label for="ExpYear">Expiration Year</label>
+                    <select name="ExpYear" id="ExpYear">
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                    </select>
+                </div>
+
+                <!--SUBMIT BUTTON-->
+                <div class="submit">
+                    <input type="submit" value="Buy Now!">
+                    <input type="reset">
+                </div>
         </div>
-        
     </form>
+    <!--RETURN TO INDEX PAGE-->
+    <a href="store_index.html">Return to Previous</a>
     
 </body>
 </html>
