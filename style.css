@@ -17,6 +17,7 @@ table {
 a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
 a:hover {
@@ -34,6 +35,10 @@ h1 {
 
 h2, h3 {
 font-style: italic;
+}
+
+h3 {
+    font-style: bold;
 }
 
 .continue {
@@ -108,3 +113,16 @@ form .credit-card .CCImage {
     height: auto;
     padding: 0 0.5rem 0 0.5rem;
 }
+
+
+form .credit-card .process {
+    display: flex;
+    justify-content: space-around
+    
+}
+
+form a
+{
+    text-align: center;
+}
+

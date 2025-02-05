@@ -13,52 +13,52 @@
        <div class="CustomerInfo">
         <div>
             <label for="FirstName">First Name</label>
-            <input name="FirstName" type="input" required pattern="^[A-Za-z]+( [A-Za-z]+)?$">
+            <input name="FirstName" type="text" required pattern="^[A-Za-z]+( [A-Za-z]+)?$">
         </div>
 
         <div>
             <label for="LastName">Last Name</label>
-            <input name="LastName" type="input" pattern="^[A-Za-z]+( [A-Za-z]+)?$">
+            <input name="LastName" type="text" required pattern="^[A-Za-z]+( [A-Za-z]+)?$">
         </div>
 
         <div>
             <label for="Email" required>Email</label>
-            <input name="email" type="email" pattern=".{0,}@.{0,}">
+            <input name="email" type="email" required pattern=".{0,}@.{0,}">
         </div>
         <div>
             <label for="Address1">Address 1</label>
-            <input name="address1" type="input" required>
+            <input name="address1" type="text" required>
         </div>
         <div>
             <label for="Address2">Address 2</label>
-            <input name ="address2" type="input">
+            <input name ="address2" type="text">
         </div>
         <div>
             <label for="City">City</label>
-            <input name="city" type="input" required pattern="^[A-Za-z]+( [A-Za-z]+)?$">
+            <input name="city" type="text" required pattern="^[A-Za-z]+( [A-Za-z]+)?$">
         </div>
         <div>
             <label for="State">State</label>
-            <input name="state" type="input" required pattern="[A-Z]{2}">
+            <input name="state" type="text" required pattern="[A-Z]{2}">
         </div>
         <div>
             <label for="ZIP">ZIP</label>
-            <input name="ZIP" type="input" required pattern="[0-9]{5}">
+            <input name="ZIP" type="text" required pattern="[0-9]{5}">
         </div>
         <div>
             <label for="Country">Country</label>
-            <input name="country" type="input" pattern="^[A-Za-z]+( [A-Za-z]+)?$">
+            <input name="country" type="text" required pattern="^[A-Za-z]+( [A-Za-z]+)?$">
         </div>
         <div>
             <label for="Phone">Phone</label>
-            <input name="phone"type="input" required pattern="^[(]?[0-9]{3}[)]?[-]?[0-9]{3}[-]?[0-9]{4}">
+            <input name="phone"type="text" required pattern="^[(]?[0-9]{3}[)]?[-]?[0-9]{3}[-]?[0-9]{4}">
         </div>
         <div>
             <label for="Fax">Fax</label>
-            <input name="fax"type="input" pattern="^[(]?[0-9]{3}[)]?[-]?[0-9]{3}[-]?[0-9]{4}">
+            <input name="fax"type="text" pattern="^[(]?[0-9]{3}[)]?[-]?[0-9]{3}[-]?[0-9]{4}">
         </div>
         <div class="checkbox">
-            <input type="checkbox">
+            <input type="checkbox" name="MailingList" value="Subscribe">
             <span>Check here to be added to the mailing list</span>
         </div>
        </div>
@@ -70,7 +70,7 @@
             <!--CREDIT CARD ISSUER-->
                 <div class="ChooseCard">
                     <div>
-                        <input type="radio" name="CreditCard" value="MasterCard">
+                        <input type="radio" name="CreditCard" value="MasterCard" required>
                         <img class="CCImage" src="./images/checkout/mc.jpg" alt="">
                         <label for="MasterCard">Master Card</label>
                     </div>
@@ -126,14 +126,16 @@
                 </div>
 
                 <!--SUBMIT BUTTON-->
-                <div class="submit">
+                <div class="process">
                     <input type="submit" value="Buy Now!">
                     <input type="reset">
                 </div>
         </div>
-    </form>
-    <!--RETURN TO INDEX PAGE-->
+
+         <!--RETURN TO INDEX PAGE-->
     <a href="store_index.html">Return to Previous</a>
+    </form>
+   
     
 </body>
 </html>
